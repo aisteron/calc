@@ -12,25 +12,80 @@
         <div id="root">
             <div class="tab-head">
                 <ul>
-                    <li class="active">Транспорт</li>
-                    <li>Маршрут</li>
-                    <li>Зарплата</li>
+                    <li class="type active">Транспорт</li>
+                    <li class="route">Маршрут</li>
+                    <li class="salary">Зарплата</li>
                 </ul>
             </div>
             <div class="tab-area">
                 <div class="type active">
-                    тип транспорта
+                    <div class="row">
+                        <select>
+                            <option>микроавтобус</option>
+                            <option>автобус</option>
+                            <option>легковой</option>
+                        </select>
+                        <select>
+                            <option>эконом</option>
+                            <option>бизнес</option>
+                            <option>представ.</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="seats" value="15"><label for="seats">мест</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="rate" value="0,3"><label for="rate">€ / км</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="cons" value="13"><label for="cons">л / км</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="rent" value="300"><label for="rent">р. / сут</label>
+                    </div>
+
+
                 </div>
-                <div class="route">
-                    маршрут, инпуты
+
+
+
+
+
+                <div class="route" style="display:none">
+
+                    <div class="wrap">
+                        <div class="left">
+                            <span class="add">добавить</span>
+                            <input type="text" value="Минск" placeholder="Старт">
+                        </div>
+                        <div class="right">
+                            <div class="row">
+                                <input type="text" id="dur" value="5"><label for="dur">часов +</label>
+                                <input type="text" id="extraDur" value="30" style="width:20px">
+
+                            </div>
+                            <div class="row">
+                                <input type="text" id="fuelPrice" value="145"><label for="fuelPrice">р. Т<sub>оп</sub></label>
+
+                            </div>
+                            <div class="row">
+                                <input type="text" id="beltol" value="16"><label for="beltol">р. Д<sub>ор</sub></label>
+                            </div>
+                            <div class="row">
+                                <input type="text" id="dist" value="550"><label for="dist">км +</label>
+                                <input type="text" id="extraDist" value="30" style="width:20px">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="salary">
+                <div class="salary" style="display:none">
                     з/п
                 </div>
             </div>
         </div>
     </div>
-
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr9imTNZzqvLQQXKekH6FeXyJ917M1lRI&libraries=places"></script>
     <script src="/dist/app.js"></script>
+
 </body>
 </html>

@@ -1,13 +1,50 @@
+input, select
+  box-sizing: content-box
+  //display: block
+  margin: 0.3rem
+  padding: 0.3rem
+  border: 1px solid #cecece
+
 .tab-head
   ul
     list-style: none
     display: flex
+    border-bottom: 1px solid #c5c5c5
+
     li
-      padding-left: 1rem
+      margin-left: 1rem
+      color: #999
+      padding-bottom: 0.3rem
+      &:hover
+        cursor: pointer
       &:first-of-type
-        padding-left: 0
+        margin-left: 0
       &.active
         border-bottom: 1px solid blue
+        color: #333
 .tab-area
   .active
-    display: block
+    display: block !important
+  .route
+    .wrap
+      display: flex
+      padding-top: 1rem
+      .left
+        position: relative
+        span.add
+          display: block
+          position: absolute
+          top: -22px
+          left: 4px
+          font-size: 0.9rem
+          color: #ff8989
+          cursor: pointer
+          &:hover
+            text-decoration: underline
+        label.remove
+          padding: 0.3rem
+          cursor: pointer
+          &:hover
+            color: red
+      .right
+        padding-left: 5rem
