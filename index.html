@@ -56,7 +56,11 @@
                     <div class="wrap">
                         <div class="left">
                             <span class="add">добавить</span>
-                            <input type="text" value="Минск, Беларусь" placeholder="Старт">
+                            <input type="text"
+                                   value="Минск, Беларусь"
+                                   placeholder="Старт"
+                                   data-location="53.896765, 27.538642"
+                            >
                         </div>
                         <div class="right">
                             <div class="row">
@@ -84,8 +88,28 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=__&libraries=places"></script>
-    <script src="/dist/app.js"></script>
+    <div class="script-area">
+        <script type='text/javascript' src='key.js'></script>
+        <script>
+
+            const googleMap = document.createElement('script');
+            googleMap.src = `https://maps.googleapis.com/maps/api/js?key=${key.my_key}&libraries=places`;
+            document.querySelector('.script-area').appendChild(googleMap);
+            googleMap.onload = () => {
+                loadApp()
+            };
+            function loadApp() {
+                const app = document.createElement('script');
+                app.src = `/dist/app.js`;
+                document.querySelector('.script-area').appendChild(app);
+            }
+
+        </script>
+
+        <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=__&libraries=places"></script-->
+        <!--script src="/dist/app.js"></script-->
+    </div>
+
 
 </body>
 </html>
