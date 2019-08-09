@@ -26,8 +26,8 @@ function draw()
         let lng = auto.getPlace().geometry.location.lng();
         el.querySelector('input').setAttribute('data-location', `${lat}, ${lng}`);
         //console.log(el.querySelector('input').dataset.location);
-        //distance()
-        beltol()
+        distance();
+        beltol();
 
     });
 
