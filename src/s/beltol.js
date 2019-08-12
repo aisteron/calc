@@ -31,6 +31,12 @@ function rest(coordinates) {
 
 }
 
+// функция, которая будет просто возвращать значение инпута
 
-export { beltol };
+function breturn() {
+    return Number(document.querySelector('#beltol').value);
+}
+
+
+export { beltol, breturn };
 

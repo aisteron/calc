@@ -15,6 +15,7 @@
                     <li class="type active" tabindex="1" aria-selected="true">Транспорт</li>
                     <li class="route" tabindex="2" aria-selected="true">Маршрут</li>
                     <li class="salary" tabindex="3" aria-selected="true">Зарплата</li>
+                    <li class="rates" tabindex="4" aria-selected="true">Курсы</li>
                 </ul>
             </div>
             <div class="tab-area">
@@ -75,8 +76,7 @@
                                 <input type="text" id="beltol" value="-"><label for="beltol">р. Д<sub>ор</sub> <span class="repeat">▼</span></label>
                             </div>
                             <div class="row">
-                                <input type="text" id="dist" value="-"><label for="dist">км +</label>
-                                <input type="text" id="extraDist" value="0" style="width:20px">
+                                <input type="text" id="dist" value="-"><label for="dist">км </label>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,36 @@
                         <label for="driver">р. Водитель</label>
                     </div>
                 </div>
+                <div class="rates" style="display: none">
+
+                    <div class="row">
+                        <input type="text" id="usd">
+                        <label for="usd">USD</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="eur" >
+                        <label for="eur">EUR</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="rub" >
+                        <label for="rub">RUB</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="byn" value="1">
+                        <label for="byn">BYN</label>
+                    </div>
+                    <hr>
+
+                    <div class="row0">
+                        <input type="text" id="fuelRate" value="0">
+                        <label for="fuelRate">1 л топлива</label>
+                    </div>
+                </div>
             </div>
+        <div id="result">
+            <button>Посчитать</button>
+            <h3>Стоимость: <span class="result"></span></h3>
+        </div>
         </div>
     </div>
     <div class="script-area">
