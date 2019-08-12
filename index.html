@@ -20,16 +20,14 @@
             <div class="tab-area">
                 <div class="type active">
                     <div class="row">
-                        <select>
-                            <option>легковой</option>
-                            <option>микроавтобус</option>
-                            <option>автобус</option>
+                        <select class="type">
+                            <option class="sedan">легковой</option>
+                            <option class="van">микроавтобус</option>
+                            <option class="bus">автобус</option>
                             
                         </select>
-                        <select>
-                            <option>эконом</option>
-                            <option>бизнес</option>
-                            <option>представ.</option>
+                        <select class="details">
+
                         </select>
                     </div>
                     <div class="row">
@@ -84,7 +82,16 @@
                     </div>
                 </div>
                 <div class="salary" style="display:none">
-                    з/п
+                    <div class="row">
+
+                        <input type="text" id="guide" value="100">
+                        <label for="guide">р. Гид</label>
+                    </div>
+                    <div class="row">
+
+                        <input type="text" id="driver" value="80">
+                        <label for="driver">р. Водитель</label>
+                    </div>
                 </div>
             </div>
         </div>
