@@ -1,10 +1,15 @@
-// Раков 53.9667658, 27.0469132
-// Минск 53.896765, 27.538642
+import {config} from "../config";
 
 // уж больно белтол ненадежный, сделаю кнопку повтора
 document.querySelector('.repeat').addEventListener("click", beltol);
 
 function beltol() {
+    let seats = document.querySelector('#seats').value;
+
+    if(seats < 19 ) {
+        document.querySelector('#beltol').value = 0;
+        return;
+    }
 
     const inputs = document.querySelectorAll('.wrap .left input');
     let coordinates = [];
@@ -19,7 +24,7 @@ function beltol() {
 function rest(coordinates) {
     let belt = document.querySelector('#beltol');
         belt.setAttribute('disabled', 'disabled');
-    fetch('http://rest.local', {
+    fetch(`${config.path.url}`, {
         method: 'POST',
         body: JSON.stringify(coordinates)
     })

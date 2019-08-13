@@ -1,11 +1,17 @@
-import {config} from "../config";
+import { config } from "../config";
+import { beltol } from "./beltol";
 
-// изменения в первом селекторе
+// слушаем изменения в первом селекторе
 let type = document.querySelector('select.type');
 
 type.addEventListener("change",(e)=>{
     drawSelectDetails(type.options[type.selectedIndex].classList[0]);
 });
+
+
+// первичная инициализация
+
+drawSelectDetails('sedan');
 
 
 function drawSelectDetails(className) {
@@ -24,9 +30,7 @@ function drawSelectDetails(className) {
 }
 
 
-// первичная инициализация
 
-drawSelectDetails('sedan');
 
 /* первый селект с типом транспорта
 // второй селект - с подробностями
@@ -58,5 +62,8 @@ function draw(className)
     document.querySelector('#rate').value = typeMe.rate;
     document.querySelector('#cons').value = typeMe.cons;
     document.querySelector('#rent').value = typeMe.rent;
+    document.querySelector('#hourRate').value = typeMe.hourRate;
+
+    beltol();
 
 }

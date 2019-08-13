@@ -1,4 +1,7 @@
-fetch('http://rest.local/fuel.php')
+import { config } from "../config";
+
+
+fetch(`${config.path.url}/fuel.php`)
     .then(response => response.json())
     .then(data => document.querySelector('#fuelRate').value = data  );
 
