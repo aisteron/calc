@@ -1,6 +1,6 @@
 let config = {
-    //path: {url:"http://sauko.by/calc/rest.local"},
-    path: {url:"http://rest.local"},
+    path: {url:"http://sauko.by/calc/rest.local/"},
+    //path: {url:"http://rest.local"},
     vehicles: {
         sedan: {
 

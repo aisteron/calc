@@ -24,7 +24,7 @@ function beltol() {
 function rest(coordinates) {
     let belt = document.querySelector('#beltol');
         belt.setAttribute('disabled', 'disabled');
-    fetch(`${config.path.url}`, {
+    fetch(`${config.path.url}/index.php`, {
         method: 'POST',
         body: JSON.stringify(coordinates)
     })
